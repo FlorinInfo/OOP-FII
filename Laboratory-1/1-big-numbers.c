@@ -18,7 +18,7 @@ int main() {
     for(int i = 0; i < 1002;i++) sumBigNumber[i] = '0';
     char *buffer = malloc(sizeof(char) * 255);
     FILE* filehandle;
-    filehandle = fopen("/Users/bucataruflorin/Desktop/INTROP/untitled3/cmake-build-debug/input.txt", "r");
+    filehandle = fopen("PATH TO FILE", "r");
     if(filehandle==0) { printf("Nu am deschis fisierul");return 0;}
 
     while(fgets(buffer, 256, filehandle)) {
