@@ -17,7 +17,7 @@ bool NumberList::Add(int x) {
 
 void NumberList::Sort() {
     for(int i = 0; i < count-1;i++) {
-        for(int j = 0; j<count;j++)
+        for(int j = i+1; j<count;j++)
             if(numbers[i]> numbers[j]) {
                 int aux = numbers[i];
                 numbers[i] = numbers[j];
