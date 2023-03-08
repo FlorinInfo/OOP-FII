@@ -7,12 +7,14 @@ void NumberList::Init() {
     count = 0;
 }
 
-bool NumberList::Add(int x) {
-    if(x == 10) std::cout << "Array is full";
-    else {
-        numbers[x] = x;
-        count++;
-    }
+void NumberList::Add(int x) {
+	int* numbersNew = new int[count+1];
+	for (int i = 0; i < count; i++)
+		numbersNew[i] = numbers[i];
+	numbersNew[count] = x;
+	count++;
+	delete[] numbers;
+	numbers = numbersNew;
 }
 
 void NumberList::Sort() {
