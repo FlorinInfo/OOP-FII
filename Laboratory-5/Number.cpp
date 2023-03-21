@@ -67,6 +67,22 @@ bool Number::operator>(Number n) {
     return this->numberValue > n.numberValue;
 }
 
+bool Number::operator<(Number n) {
+    return this->numberValue < n.numberValue;
+}
+
+bool Number::operator>=(Number n) {
+    return this->numberValue > n.numberValue;
+}
+
+bool Number::operator<=(Number n) {
+    return this->numberValue < n.numberValue;
+}
+
+bool Number::operator==(Number n) {
+    return this->numberValue == n.numberValue;
+}
+
 int Number::GetBase() {
     return this->base;
 }

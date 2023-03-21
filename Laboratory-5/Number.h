@@ -24,6 +24,10 @@ public:
 
     char operator [](int index);
     bool operator >(Number n);
+    bool operator <(Number n);
+    bool operator >=(Number n);
+    bool operator <=(Number n);
+    bool operator ==(Number n);
     Number& operator = (int val);
     Number& operator = (char *val);
     friend bool operator += (Number & i, Number y);
