@@ -167,3 +167,11 @@ void Number::setNumberValue(char *value) {
     }
     this->numberValue=num;
 }
+
+bool operator += (Number &i, Number y)
+{
+    i.numberValue = i.numberValue + y.numberValue;
+    if(y.base > i.base) i.base = y.base;
+    i.SwitchBase(i.base);
+    return true;
+}

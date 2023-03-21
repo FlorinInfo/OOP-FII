@@ -26,7 +26,7 @@ public:
     bool operator >(Number n);
     Number& operator = (int val);
     Number& operator = (char *val);
-
+    friend bool operator += (Number & i, Number y);
 
 
 
