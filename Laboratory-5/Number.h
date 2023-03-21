@@ -15,19 +15,20 @@ public:
 
     Number(char * value, int base); // where base is between 2 and 16
     Number(int value);
+//    Number(Number &a);
+//    Number(Number &&a);
 
 //    ~Number();
 
     // add operators and copy/move constructor
 
     char operator [](int index);
-    int operator +(Number n);
-    int operator -(Number n);
     bool operator >(Number n);
     Number& operator = (int val);
     Number& operator = (char *val);
     friend bool operator += (Number & i, Number y);
-
+    friend Number operator+(Number n1, Number n2);
+    friend Number operator-(Number n1, Number n2);
 
 
     bool operator-- ();

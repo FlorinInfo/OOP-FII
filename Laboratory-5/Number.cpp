@@ -26,7 +26,20 @@ Number::Number(int value) {
     this->SwitchBase(this->base);
 }
 
+//Number::Number(Number &a) {
+//    this->base = a.base;
+//    this->numberValue = a.numberValue;
+//    int i = 0;
+//    for(i = 0; a.charValue[i]!= '\0';i++) ;
+//    this->charValue = new char(i);
+//    for(int j = 0; j < i;j++) this->charValue[i] = a.charValue[i];
+//}
 
+//Number::Number(Number &&a) {
+//    this->base = a.base;
+//    this->numberValue = a.numberValue;
+//    this->charValue = a.charValue;
+//}
 
 Number& Number::operator = (int val)
 {
@@ -48,10 +61,7 @@ char Number::operator[](int index) {
     return this->charValue[index];
 }
 
-int Number::operator+(Number n) {
 
-    return numberValue+n.numberValue;
-}
 
 bool Number::operator>(Number n) {
     return this->numberValue > n.numberValue;
@@ -175,3 +185,22 @@ bool operator += (Number &i, Number y)
     i.SwitchBase(i.base);
     return true;
 }
+
+Number operator+(Number n1, Number n2) {
+int maxBase = n1.GetBase();
+if(n2.GetBase() > maxBase) maxBase = n2.GetBase();
+int s = n1.numberValue + n2.numberValue;
+Number n(s);
+n.SwitchBase(maxBase);
+return n;
+}
+
+Number operator-(Number n1, Number n2) {
+    int maxBase = n1.GetBase();
+    if(n2.GetBase() > maxBase) maxBase = n2.GetBase();
+    int s = n1.numberValue - n2.numberValue;
+    Number n(s);
+    n.SwitchBase(maxBase);
+    return n;
+}
+
