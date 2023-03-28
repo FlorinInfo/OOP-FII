@@ -6,10 +6,12 @@
 #define LABORATORY_6_CIRCUIT_H
 #include "Weather.h"
 #include "Car.h"
+#include "Team.h"
 
 struct Rank{
     float time;
     Car *cm[1001];
+    Team *t[1001];
     int finished;
     char *model;
 };
@@ -31,6 +33,7 @@ public:
     void Race();
     void ShowFinalRanks();
     void ShowWhoDidNotFinish();
+    void RaceTeams();
     void printCircuitData();
 };
 
