@@ -3,6 +3,7 @@
 //
 
 #include "Team.h"
+Team::Team() {};
 Team::Team(Car *car, char *name_1, char *name_2) {
     this->player_1 = new Player(name_1);
     this->player_2 = new Player(name_2);
@@ -13,4 +14,12 @@ void Team::printData() {
     std::cout << this->car->model;
     std::cout << this->player_1->getName();
     std::cout << this->player_2->getName();
+}
+
+Player *Team::getPlayer1() {
+    return this->player_1;
+}
+
+Player *Team::getPlayer2() {
+    return this->player_2;
 }

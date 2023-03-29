@@ -11,18 +11,26 @@
 struct Rank{
     float time;
     Car *cm[1001];
-    Team *t[1001];
     int finished;
     char *model;
+};
+
+struct TeamRank {
+    float time;
+    Team *team[1001];
+    int finished;
 };
 
 class Circuit {
 private:
     int length;
     int nrCars;
+    int nrTeams;
     Car *cars[1001];
+    Team *teams[1001];
     Weather weather;
     Rank r[1001];
+    TeamRank tr[1001];
 
 public:
     Circuit();
@@ -30,10 +38,11 @@ public:
     void SetLength(int l);
     void SetWeather(Weather w);
     void AddCar(Car *c);
+    void AddTeam(Team *t);
     void Race();
+    void RaceTeam();
     void ShowFinalRanks();
     void ShowWhoDidNotFinish();
-    void RaceTeams();
     void printCircuitData();
 };
 

@@ -11,10 +11,13 @@ class Team {
 private:
     Player *player_1;
     Player *player_2;
-    Car *car;
 
 public:
+    Car *car;
+    Team();
     Team(Car *c, char *name_1, char *name_2);
+    Player *getPlayer1();
+    Player *getPlayer2();
     void printData();
 };
 

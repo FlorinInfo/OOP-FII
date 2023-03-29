@@ -21,3 +21,7 @@ Player::Player(char *n, Skills s) {
 char* Player::getName() {
     return this->name;
 }
+
+int Player::getSkill() {
+    return this->s;
+}

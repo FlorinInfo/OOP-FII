@@ -5,8 +5,8 @@
 #ifndef LABORATORY_6_SKILLS_H
 #define LABORATORY_6_SKILLS_H
 enum Skills{
-    top,
+    slow,
     medium,
-    slow
+    top
 };
 #endif //LABORATORY_6_SKILLS_H

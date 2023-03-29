@@ -9,14 +9,16 @@
 class Player {
 private:
     char *name;
-public:
-    char* getName();
     Skills s;
 
 public:
     Player();
     Player( char *n);
     Player( char *n, Skills s);
+    char* getName();
+    int getSkill();
+
+
 };
 
 

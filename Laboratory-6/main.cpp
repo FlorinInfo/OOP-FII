@@ -13,8 +13,8 @@
 
 
 int main() {
-    Team t(new Volvo(), "ANa", "Jana");
-    t.printData();
+//    Team t(new Volvo(), "ANa", "Jana");
+//    t.printData();
     std::cout << "\n";
     Circuit c;
 
